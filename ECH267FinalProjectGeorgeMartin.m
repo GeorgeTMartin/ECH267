@@ -4,23 +4,23 @@ clc;clear;close;
 global K1 K2 K3 K4 K5 K6 K7 K8 T_amb T_wo tprev k Ierror MaxFlow Gain
 rho_a = 1.225; %kg/m^3
 cp_a = 1000; %J/[Kg*K]
-M_tc = 25;
+M_tc = 25; %Thermal Mass Capacitance of Room
 Q_w = .0005; %m^3/s [Ratio of Chiller Flow to Output Air]
 c_pw = 4186; %J/[kg*K]
 M_cc = .5; %kg
 c_v = 718; %J/[kg*K]
 V_t = 3; %m^3
 rho_w = 1000; %kg/m^3
-T_wo = 10; %C
-T_amb = 30; %C
-MaxFlow = .5;
-U_cc = 15;
-U_tc = 30;
-U_ta = 10;
-A_ta = 2;
-A_cc = 5;
-Qgen = 150; %J
-Gain =.4;
+T_wo = 10; %C Temperature of Water Leaving Chiller
+T_amb = 30; %C Ambient Temperature
+MaxFlow = .5; %Maximum Fan Flow Rate
+U_cc = 15; %Heat Transfer Coefficient of Chiller Coil
+U_tc = 30; %Heat Transfer Coefficient of Room
+U_ta = 10; %Heat Transfer Coefficient of Tank
+A_ta = 2; %Surface Area of Tank
+A_cc = 5; %Surface Area of Chiller Coil
+Qgen = 150; %J Heat Produced in Room
+Gain =.4;                                                       %Change Gain Value to Increase or Decrease Response
 
 K1 = rho_a*cp_a/(M_tc*c_v);
 K2 = U_tc*A_cc/(M_tc*c_v);
