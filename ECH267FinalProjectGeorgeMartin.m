@@ -82,7 +82,7 @@ x2 = x(2);
 x3 = x(3);
 Perror = x1-25;
 dt = t-t_prev;
-Ierror = Ierror + Perror*dt;
+%Ierror = Ierror + Perror*dt;
 switch k
     case 1 %ZERO INPUT
         u = 0;
